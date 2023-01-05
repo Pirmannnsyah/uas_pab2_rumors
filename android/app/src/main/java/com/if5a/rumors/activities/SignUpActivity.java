@@ -3,6 +3,7 @@ package com.if5a.rumors.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -42,7 +43,7 @@ public class SignUpActivity extends AppCompatActivity {
         etnohp = findViewById(R.id.et_email);
         etpassword = findViewById(R.id.et_password);
         etulangpassword = findViewById(R.id.et_ulangpassword);
-        etmasuk = findViewById(R.id.et_masuklogin);
+        etmasuk = findViewById(R.id.tv_buatmasuk);
         btndaftar = findViewById(R.id.btn_daftar);
 
         btndaftar.setOnClickListener(new View.OnClickListener() {
@@ -98,6 +99,24 @@ public class SignUpActivity extends AppCompatActivity {
 
                             }
                         });
+            }
+        });
+
+        btndaftar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        etmasuk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
