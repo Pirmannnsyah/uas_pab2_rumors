@@ -58,6 +58,15 @@ public class ResetPasswordActivity extends AppCompatActivity {
             }
         });
 
+        btnResetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ResetPasswordActivity.this, SignInActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         tvMasuk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

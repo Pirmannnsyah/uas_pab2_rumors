@@ -39,11 +39,11 @@ dependencies {
     // Firebase Analytics
     implementation 'com.google.firebase:firebase-analytics'
     // Firebase Authentication
-    implementation 'com.google.firebase:firebase-auth'
+    implementation 'com.google.firebase:firebase-auth:21.1.0'
     // Firebase Realtime Database
-    implementation 'com.google.firebase:firebase-database'
+    implementation 'com.google.firebase:firebase-database:20.1.0'
     // Firebase Storage
-    implementation 'com.google.firebase:firebase-storage'
+    implementation 'com.google.firebase:firebase-storage:20.1.0'
     // Firebase Cloud Messaging
     implementation 'com.google.firebase:firebase-messaging'
     // FirebaseUI for Firebase Realtime Database

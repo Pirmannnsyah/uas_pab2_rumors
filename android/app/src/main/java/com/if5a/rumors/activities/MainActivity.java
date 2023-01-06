@@ -1,6 +1,7 @@
 package com.if5a.rumors.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
@@ -22,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
     MyViewPagerAdapter myViewPagerAdapter;
     BottomNavigationView bottomNavigationView;
     private FirebaseAuth mAuth;
+    private static final String TAG = MainActivity.class.getSimpleName();
+
+    private String mUsername;
+    private static final int REQUEST_IMAGE = 2;
+    private static final String LOADING_IMAGE_URL = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
             setContentView(R.layout.activity_main);
 
-//            bottomNavigationView = findViewById(R.id.bottomNavigationView);
-//            bottomNavigationView.setItemBackground(null);
-////        bottomNavigationView.getMenu().getItem(2).
+            bottomNavigationView = findViewById(R.id.bottomNavigationView);
             tabLayout = findViewById(R.id.tb_main);
             viewPager2 = findViewById(R.id.view_pager);
             myViewPagerAdapter = new MyViewPagerAdapter(this);
@@ -78,6 +82,8 @@ public class MainActivity extends AppCompatActivity {
                     finish();
                 }
             });
+
+            bottomNavigationView.
         }
     }
 }
