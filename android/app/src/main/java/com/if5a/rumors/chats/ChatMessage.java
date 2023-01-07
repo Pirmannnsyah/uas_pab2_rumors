@@ -3,15 +3,15 @@ package com.if5a.rumors.chats;
 public class ChatMessage {
     private String id;
     private String text;
-    private String name;
+    private String sender;
     private String imageUrl;
 
     public ChatMessage() {
     }
 
-    public ChatMessage(String text, String name, String imageUrl) {
+    public ChatMessage(String text, String sender, String imageUrl) {
         this.text = text;
-        this.name = name;
+        this.sender = sender;
         this.imageUrl = imageUrl;
     }
 
@@ -31,12 +31,12 @@ public class ChatMessage {
         this.text = text;
     }
 
-    public String getName() {
-        return name;
+    public String getSender() {
+        return sender;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setSender(String sender) {
+        this.sender = sender;
     }
 
     public String getImageUrl() {

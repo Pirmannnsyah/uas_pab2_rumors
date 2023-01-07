@@ -1,7 +1,6 @@
 package com.if5a.rumors.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
@@ -9,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.if5a.rumors.R;
@@ -17,11 +15,16 @@ import com.if5a.rumors.adapters.MyViewPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView ivLogout;
+    private ImageView ivLogout, ivmessage, ivAccount, ivInfo;
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     MyViewPagerAdapter myViewPagerAdapter;
-    BottomNavigationView bottomNavigationView;
+//    BottomNavigationView bottomNavigationView;
+//    HomeFragment homeFragment = new HomeFragment();
+//    ChatFragment chatFragment = new ChatFragment();
+//    AccountFragment accountFragment = new AccountFragment();
+//    InfoFragment infoFragment = new InfoFragment();
+
     private FirebaseAuth mAuth;
     private static final String TAG = MainActivity.class.getSimpleName();
 
@@ -41,12 +44,41 @@ public class MainActivity extends AppCompatActivity {
 
             setContentView(R.layout.activity_main);
 
-            bottomNavigationView = findViewById(R.id.bottomNavigationView);
+//            bottomNavigationView = findViewById(R.id.bottomNavigationView);
+
+//            getSupportFragmentManager().beginTransaction().replace(R.id.bottomAppBar,HomeFragment).commit();
+//
+//            bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+//                @Override
+//                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//                    switch (item.getItemId()){
+//                        case R.id.miHome:
+//                            getSupportFragmentManager().beginTransaction().replace(R.id.container,HomeFragment).commit();
+//                            return true;
+//                        case R.id.miMessage:
+//                            getSupportFragmentManager().beginTransaction().replace(R.id.container,ChatFragment).commit();
+//                            return true;
+//                        case R.id.miAccount:
+//                            getSupportFragmentManager().beginTransaction().replace(R.id.container,AccountFragment).commit();
+//                            return true;
+//                        case R.id.miInfo:
+//                            getSupportFragmentManager().beginTransaction().replace(R.id.container,InfoFragment).commit();
+//                            return true;
+//                    }
+//                    return false;
+//                }
+//            });
+
+
+
             tabLayout = findViewById(R.id.tb_main);
             viewPager2 = findViewById(R.id.view_pager);
             myViewPagerAdapter = new MyViewPagerAdapter(this);
             viewPager2.setAdapter(myViewPagerAdapter);
             ivLogout = findViewById(R.id.iv_logout);
+            ivmessage = findViewById(R.id.iv_messege_receiver);
+            ivAccount = findViewById(R.id.iv_person);
+            ivInfo = findViewById(R.id.iv_info);
 
             tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                 @Override
@@ -83,7 +115,34 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            bottomNavigationView.
+            ivmessage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this, ChatActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+
+            ivAccount.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this, AccountActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+
+            ivLogout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this, InfoActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+
+
         }
     }
 }
