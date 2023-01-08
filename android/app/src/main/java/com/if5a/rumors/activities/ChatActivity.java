@@ -183,7 +183,7 @@ public class ChatActivity extends AppCompatActivity {
                             holder.ivSender.setImageDrawable(textDrawable);
                         }else{
                             holder.llReceiver.setVisibility(View.VISIBLE);
-                            holder.llSender.setVisibility(View.VISIBLE);
+                            holder.llSender.setVisibility(View.GONE);
 
                             if (model.getText()!= null){
                                 holder.tvMessageReceiver.setText(model.getText());
