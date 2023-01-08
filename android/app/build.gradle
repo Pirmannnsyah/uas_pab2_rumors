@@ -63,6 +63,11 @@ dependencies {
 
     implementation 'com.github.abdularis:circularimageview:1.5'
 
+    // Expansion Panel
+    implementation 'com.github.florent37:expansionpanel:1.2.4'
+    // Circle Image View
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
