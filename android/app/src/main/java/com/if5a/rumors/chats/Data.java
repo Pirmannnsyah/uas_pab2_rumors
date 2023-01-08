@@ -1,4 +1,4 @@
-package com.if5a.rumors;
+package com.if5a.rumors.chats;
 
 public class Data {
     private String title;

@@ -1,4 +1,7 @@
-package com.if5a.rumors;
+package com.if5a.rumors.services;
+
+import com.if5a.rumors.chats.Sender;
+import com.if5a.rumors.chats.ViewData;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
