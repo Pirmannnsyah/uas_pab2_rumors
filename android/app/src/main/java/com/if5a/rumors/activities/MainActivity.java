@@ -15,7 +15,7 @@ import com.if5a.rumors.adapters.MyViewPagerAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView ivLogout, ivmessage, ivAccount, ivInfo;
+    private ImageView ivLogout, ivmessage, ivAccount, ivInfo, ivAdd;
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     MyViewPagerAdapter myViewPagerAdapter;
@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
             ivmessage = findViewById(R.id.iv_messege_receiver);
             ivAccount = findViewById(R.id.iv_person);
             ivInfo = findViewById(R.id.iv_info);
+            ivAdd = findViewById(R.id.iv_addPost);
 
             tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
                 @Override
@@ -141,6 +142,16 @@ public class MainActivity extends AppCompatActivity {
                     finish();
                 }
             });
+
+            ivAdd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(MainActivity.this, PostActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            });
+
 
 
         }

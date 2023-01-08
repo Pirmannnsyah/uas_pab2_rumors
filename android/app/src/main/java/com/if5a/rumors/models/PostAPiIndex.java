@@ -5,10 +5,9 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.SerializedName;
 
-public class PostAPI implements Parcelable {
-
-    @SerializedName("user_id")
-    private String user_id;
+public class PostAPiIndex implements Parcelable {
+    @SerializedName("id")
+    private String id;
 
     @SerializedName("kategori")
     private String kategori;
@@ -19,50 +18,56 @@ public class PostAPI implements Parcelable {
     @SerializedName("content")
     private String content;
 
-    @SerializedName("name")
-    private String nama;
+    @SerializedName("username")
+    private String username;
 
     @SerializedName("created_at")
     private String date;
 
-    public PostAPI() {
+    @SerializedName("profile_picture")
+    private String profile_picture;
+
+    public PostAPiIndex() {
     }
 
-    public PostAPI(String user_id, String kategori, String judul, String content, String nama) {
-        this.user_id = user_id;
+    public PostAPiIndex(String id, String kategori, String judul, String content, String username, String date, String profile_picture) {
+        this.id = id;
         this.kategori = kategori;
         this.judul = judul;
         this.content = content;
-        this.nama = nama;
+        this.username = username;
+        this.date = date;
+        this.profile_picture = profile_picture;
     }
 
-    protected PostAPI(Parcel in) {
-        user_id = in.readString();
+    protected PostAPiIndex(Parcel in) {
+        id = in.readString();
         kategori = in.readString();
         judul = in.readString();
         content = in.readString();
-        nama = in.readString();
+        username = in.readString();
         date = in.readString();
+        profile_picture = in.readString();
     }
 
-    public static final Creator<PostAPI> CREATOR = new Creator<PostAPI>() {
+    public static final Creator<PostAPiIndex> CREATOR = new Creator<PostAPiIndex>() {
         @Override
-        public PostAPI createFromParcel(Parcel in) {
-            return new PostAPI(in);
+        public PostAPiIndex createFromParcel(Parcel in) {
+            return new PostAPiIndex(in);
         }
 
         @Override
-        public PostAPI[] newArray(int size) {
-            return new PostAPI[size];
+        public PostAPiIndex[] newArray(int size) {
+            return new PostAPiIndex[size];
         }
     };
 
-    public String getUser_id() {
-        return user_id;
+    public String getId() {
+        return id;
     }
 
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getKategori() {
@@ -89,12 +94,12 @@ public class PostAPI implements Parcelable {
         this.content = content;
     }
 
-    public String getNama() {
-        return nama;
+    public String getUsername() {
+        return username;
     }
 
-    public void setNama(String nama) {
-        this.nama = nama;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getDate() {
@@ -105,6 +110,14 @@ public class PostAPI implements Parcelable {
         this.date = date;
     }
 
+    public String getProfile_picture() {
+        return profile_picture;
+    }
+
+    public void setProfile_picture(String profile_picture) {
+        this.profile_picture = profile_picture;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -112,11 +125,12 @@ public class PostAPI implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeString(user_id);
+        parcel.writeString(id);
         parcel.writeString(kategori);
         parcel.writeString(judul);
         parcel.writeString(content);
-        parcel.writeString(nama);
+        parcel.writeString(username);
         parcel.writeString(date);
+        parcel.writeString(profile_picture);
     }
 }

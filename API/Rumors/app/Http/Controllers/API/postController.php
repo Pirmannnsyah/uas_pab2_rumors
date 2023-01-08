@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Post;
+use DB;
 
 class postController extends Controller
 {
@@ -16,7 +17,7 @@ class postController extends Controller
     public function index()
     {
         try {
-            $Post = Post::all();
+            $Post = DB::select("select post.id,post.kategori,post.judul,post.content,post.created_at, u.username, u.profile_picture from post inner join users u on post.user_id = u.user_id");
             if($Post){
                 return response()->json([
                     "data"=>$Post
@@ -69,7 +70,7 @@ class postController extends Controller
      */
     public function show($kategori)
     {
-        $Post = Post::where("kategori","=",$kategori)->get();
+        $Post = DB::select("select post.id,post.kategori,post.judul,post.content,post.created_at, u.username, u.profile_picture from post inner join users u on post.user_id = u.user_id where post.kategori = ?",[$kategori]);
         if ($Post) {
             return response()->json([
                 "data"=>$Post

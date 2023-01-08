@@ -37,7 +37,7 @@ class likeController extends Controller
             ]);
         } catch (\Exception $e) {
             return response()->json([
-                "message" => "Gagal store data"
+                "message" => $e
             ]);
         }
 

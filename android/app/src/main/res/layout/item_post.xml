@@ -22,7 +22,7 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/iv_post"
+                android:id="@+id/iv_detail_profil_post"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@mipmap/ic_launcher_round"
@@ -30,26 +30,26 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_username_post"
+                android:id="@+id/tv_detail_username_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Firmansayh"
-                app:layout_constraintStart_toEndOf="@+id/iv_post"
+                app:layout_constraintStart_toEndOf="@+id/iv_detail_profil_post"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tv_date_post"
+                android:id="@+id/tv_detail_date_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hari ini, 07:34"
-                app:layout_constraintStart_toEndOf="@+id/iv_post"
-                app:layout_constraintTop_toBottomOf="@+id/tv_username_post" />
+                app:layout_constraintStart_toEndOf="@+id/iv_detail_profil_post"
+                app:layout_constraintTop_toBottomOf="@+id/tv_detail_username_post" />
 
             <TextView
-                android:id="@+id/tv_judul_post"
+                android:id="@+id/tv_detail_judul_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@+id/tv_date_post"
+                app:layout_constraintTop_toBottomOf="@+id/tv_detail_date_post"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_margin="8dp"
@@ -58,47 +58,16 @@
 
             <TextView
                 android:id="@+id/tv_deskripsi_post"
-                app:layout_constraintTop_toBottomOf="@+id/tv_judul_post"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_margin="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/contoh_deskripsi"/>
-
-            <ImageView
-                android:id="@+id/iv_like_post"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
                 android:layout_margin="8dp"
-                android:src="@drawable/ic_like"
+                android:justificationMode="inter_word"
+                android:maxLines="4"
+                android:text="@string/contoh_deskripsi"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_deskripsi_post" />
-
-            <TextView
-                android:id="@+id/tv_like_post"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1"
-                android:layout_margin="4dp"
-                app:layout_constraintTop_toTopOf="@+id/iv_like_post"
-                app:layout_constraintStart_toEndOf="@id/iv_like_post"
-                app:layout_constraintBottom_toBottomOf="@+id/iv_like_post"/>
-
-            <ImageView
-                android:id="@+id/iv_coment_post"
-                android:layout_width="28dp"
-                android:layout_height="28dp"
-                android:text="1"
-                android:layout_margin="4dp"
-                app:layout_constraintTop_toTopOf="@+id/tv_like_post"
-                app:layout_constraintStart_toEndOf="@id/tv_like_post"
-                app:layout_constraintBottom_toBottomOf="@+id/tv_like_post"
-                android:src="@drawable/ic_message"/>
-
-
-
+                app:layout_constraintTop_toBottomOf="@+id/tv_detail_judul_post" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
