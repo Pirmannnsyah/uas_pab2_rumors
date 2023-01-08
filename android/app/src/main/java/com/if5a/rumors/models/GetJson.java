@@ -1,7 +1,7 @@
 package com.if5a.rumors.models;
 
 
-public class getJson<datajson>{
+public class GetJson<datajson>{
 
     private String message;
     private datajson data;
