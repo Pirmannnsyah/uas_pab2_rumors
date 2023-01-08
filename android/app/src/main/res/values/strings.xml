@@ -2,7 +2,7 @@
     <string name="app_name">Rumors</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="reset_pw">Tulis email yang telah anda daftarkan sebelumnya agar mendapat instruksi reset passowrd</string>
+    <string name="reset_pw">Tulis email yang telah anda daftarkan sebelumnya, untuk mendapat instruksi reset password.</string>
     <string name="default_notification_channel_id">fcm_chat_together_default</string>
     <string name="contoh_deskripsi">Kali ini kami akan membawa kamu sedikit jauh ke Pulau Sumatra, tepatnya di daerah Palembang. Siapa yang menyangka jika Palembang menyimpan ragam makanan khas yang menggugah selera? Sajian makanan khas palembang bisa membuat para perantau asli palembang rindu akan kampuang halamannyo. Jika kamu hanya tahu makanan asli palembang adalah pempek, berarti kamu harus membaca ulasan daftar makanan khas palembang berikut ini.</string>
 </resources>

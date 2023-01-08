@@ -30,7 +30,7 @@
                 android:layout_gravity="top"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
                 android:gravity="center_vertical"
@@ -42,11 +42,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
-                    android:textSize="16dp"
+                    android:textSize="14dp"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="8dp"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat_bold"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="6dp"
+                    android:textColor="#494747"
+                    android:fontFamily="@font/montserrat_semibold"
                     android:text="Firman"/>
 
                 <TextView
@@ -55,11 +56,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
                     android:layout_marginStart="16dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="6dp"
                     android:fontFamily="@font/montserrat_medium"
-                    android:textSize="14dp"
+                    android:textSize="12dp"
                     android:text="Hallo Guys"
-                    android:textColor="@color/white"/>
+                    android:textColor="#494747"/>
 
                 <ImageView
                     android:id="@+id/iv_messege_receiver"
@@ -92,15 +94,16 @@
                 android:id="@+id/iv_sender"
                 android:layout_width="36dp"
                 android:layout_height="36dp"
-                android:src="@mipmap/ic_launcher_round"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginEnd="16dp"
+                android:layout_alignParentEnd="true"
                 android:layout_gravity="top"
-                android:layout_alignParentEnd="true"/>
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/ic_launcher_round" />
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
                 android:gravity="center_vertical"
@@ -113,12 +116,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
-                    android:textSize="16dp"
+                    android:textSize="14dp"
+                    android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="6dp"
                     android:layout_gravity="end"
-                    android:textColor="@color/white"
-                    android:fontFamily="@font/montserrat_bold"
+                    android:textColor="#494747"
+                    android:fontFamily="@font/montserrat_semibold"
                     android:text="Firman"/>
 
                 <TextView
@@ -126,13 +130,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="0"
+                    android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="6dp"
                     android:fontFamily="@font/montserrat_medium"
                     android:layout_gravity="end"
-                    android:textSize="14dp"
+                    android:textSize="12dp"
                     android:text="Hallo Guys"
-                    android:textColor="@color/white"/>
+                    android:textColor="#494747"/>
 
                 <ImageView
                     android:id="@+id/iv_messege_sender"

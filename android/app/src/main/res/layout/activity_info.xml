@@ -7,4 +7,43 @@
     android:layout_height="match_parent"
     tools:context=".activities.InfoActivity">
 
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/cl_tb_chat"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <ImageView
+          android:id="@+id/iv_back"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:src="@drawable/ic_back" />
+
+      <TextView
+          android:id="@+id/tv_rumors"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerVertical="true"
+          android:layout_marginStart="24dp"
+          android:layout_toEndOf="@id/iv_back"
+          android:fontFamily="@font/monumentextended_regular"
+          android:letterSpacing="0.05"
+          android:text="RUMORS"
+          android:textColor="#263159"
+          android:textSize="20dp" />
+    </RelativeLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
   </androidx.constraintlayout.widget.ConstraintLayout>

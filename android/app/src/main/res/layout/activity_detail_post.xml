@@ -62,6 +62,7 @@
                 android:id="@+id/iv_detail_profil_post"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_marginTop="10dp"
                 android:src="@mipmap/ic_launcher_round"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -70,6 +71,12 @@
                 android:id="@+id/tv_detail_username_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="@color/black"
+                android:letterSpacing=".05"
+                android:textSize="18sp"
                 android:text="Firmansayh"
                 app:layout_constraintStart_toEndOf="@+id/iv_detail_profil_post"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -78,6 +85,8 @@
                 android:id="@+id/tv_detail_date_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/montserrat_regular"
                 android:text="Hari ini, 07:34"
                 app:layout_constraintStart_toEndOf="@+id/iv_detail_profil_post"
                 app:layout_constraintTop_toBottomOf="@+id/tv_detail_username_post" />
@@ -86,9 +95,15 @@
                 android:id="@+id/tv_detail_judul_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_bold"
+                android:textSize="18sp"
+                android:layout_marginTop="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:textAlignment="textStart"
                 android:text="Lihat!!, Daftar makanan terkenal di kota palembang"
-                android:textAlignment="center"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_detail_date_post" />
@@ -97,9 +112,13 @@
                 android:id="@+id/tv_detail_deskripsi_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
                 android:justificationMode="inter_word"
-                android:maxLines="4"
+                android:fontFamily="@font/montserrat_regular"
                 android:text="@string/contoh_deskripsi"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -107,27 +126,27 @@
 
             <ImageView
                 android:id="@+id/iv_edit"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="8dp"
                 android:src="@drawable/ic_baseline_edit_24"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/tv_detail_deskripsi_post"
+                app:layout_constraintEnd_toStartOf="@id/iv_delete_post"
                 app:layout_constraintTop_toBottomOf="@+id/tv_detail_deskripsi_post">
             </ImageView>
 
             <ImageView
                 android:id="@+id/iv_delete_post"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:src="@drawable/ic_trash"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_detail_deskripsi_post">
-            </ImageView>
+                app:layout_constraintTop_toBottomOf="@+id/tv_detail_deskripsi_post"></ImageView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

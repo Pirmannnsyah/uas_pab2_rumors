@@ -6,157 +6,174 @@
     android:layout_height="match_parent"
     tools:context=".activities.SignInActivity">
 
-    <TextView
-        android:id="@+id/tv_signin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/opensans_semibold"
-        android:letterSpacing="0.05"
-        android:text="Masuk"
-        android:layout_marginTop="24dp"
-        android:textAlignment="center"
-        android:textColor="#263159"
-        android:textSize="26sp"
+    <ImageView
+        android:id="@+id/bg_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:alpha="0.9"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_signin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHeight_percent=".4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0"/>
 
-    <TextView
-        android:id="@+id/tv_subsignin"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/opensans_medium"
-        android:text="Masuk ke dalam akunmu"
-        android:textAlignment="center"
-        android:textColor="#626161"
-        android:textSize="16sp"
+        android:layout_height="0dp"
+        android:background="@drawable/view_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHeight_percent=".73"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_signin" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cv_signin"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:elevation="4dp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="15dp"
-        app:cardUseCompatPadding="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_subsignin"
-        app:strokeColor="#8A8A8A"
-        app:strokeWidth="1dp">
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/tv_signin"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="24dp"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_bold"
+            android:letterSpacing="0.05"
+            android:text="LOGIN"
+            android:layout_marginTop="24dp"
+            android:textAlignment="center"
+            android:textColor="#263159"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/opensans_medium"
-                android:text="Email"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/costum_et"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="12dp"
+            android:drawableTint="#626161"
+            android:hint="Email"
+            android:fontFamily="@font/montserrat_semibold"
+            android:layout_marginTop="72dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:padding="8dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_signin" />
 
-            <EditText
-                android:id="@+id/et_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/costum_et"
-                android:drawableLeft="@drawable/ic_email"
-                android:drawablePadding="12dp"
-                android:drawableTint="#626161"
-                android:hint="Masukan Email"
-                android:padding="8dp"
-                android:textSize="14sp" />
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/costum_et"
+            android:drawableLeft="@drawable/ic_lock"
+            android:drawablePadding="12dp"
+            android:drawableTint="#626161"
+            android:hint="Password"
+            android:fontFamily="@font/montserrat_semibold"
+            android:inputType="textPassword"
+            android:padding="8dp"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/opensans_medium"
-                android:text="Password"
-                android:textColor="@color/black"
-                android:textSize="16sp" />
+        <TextView
+            android:id="@+id/tv_lupapassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:text="Forget Password?"
+            android:textSize="14sp"
+            android:textAlignment="textEnd"
+            android:textColor="#626161"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
-            <EditText
-                android:id="@+id/et_password"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/costum_et"
-                android:drawableLeft="@drawable/ic_lock"
-                android:drawablePadding="12dp"
-                android:drawableTint="#626161"
-                android:inputType="textPassword"
-                android:hint="Masukan Password"
-                android:padding="8dp"
-                android:textSize="14sp" />
+        <Button
+            android:id="@+id/btn_masuk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:text="Masuk"
+            android:fontFamily="@font/montserrat_medium"
+            android:background="@drawable/costum_btn"
+            android:textSize="14sp"
+            android:letterSpacing="0.2"
+            android:textAllCaps="false"
+            android:minHeight="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_lupapassword" />
 
-            <TextView
-                android:id="@+id/tv_lupapassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textColor="#626161"
-                android:fontFamily="@font/opensans_medium"
-                android:text="Lupa Password?"
-                android:textAlignment="textEnd"/>
-        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_subdaftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="36dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="belum punya akun ?"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_masuk" />
 
-    </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:id="@+id/tv_buatdaftar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:text=" Daftar"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="#263159"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@+id/tv_subdaftar"
+            app:layout_constraintTop_toTopOf="@+id/tv_subdaftar" />
 
-    <Button
-        android:id="@+id/btn_masuk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="24dp"
-        android:text="Masuk"
-        android:fontFamily="@font/opensans_medium"
-        android:background="@drawable/costum_btn"
-        android:textSize="14sp"
-        android:letterSpacing="0.2"
-        android:textAllCaps="false"
-        android:minHeight="24dp"
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.github.abdularis.civ.CircleImageView
+        android:id="@+id/iv_logo_signin"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintBottom_toTopOf="@id/constraintLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cv_signin" />
+        app:layout_constraintTop_toTopOf="@id/bg_signin"
+        app:layout_constraintVertical_bias=".3" />
 
     <TextView
-        android:id="@+id/tv_subdaftar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="belum punya akun ?"
-        android:layout_marginTop="6dp"
-        android:fontFamily="@font/opensans_regular"
-        android:layout_marginStart="100dp"
-        android:textAlignment="center"
+        android:text="RUMORS"
+        app:layout_constraintVertical_bias=".2"
+        android:textColor="@color/white"
+        android:fontFamily="@font/monumentextended_regular"
+        android:letterSpacing="0.1"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_masuk" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_logo_signin" />
 
-    <TextView
-        android:id="@+id/tv_buatdaftar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="-3dp"
-        android:textSize="16sp"
-        android:text="Daftar"
-        android:fontFamily="@font/opensans_semibold"
-        android:textColor="#263159"
-        android:textAlignment="center"
-        app:layout_constraintStart_toEndOf="@+id/tv_subdaftar"
-        app:layout_constraintTop_toTopOf="@+id/tv_subdaftar" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
