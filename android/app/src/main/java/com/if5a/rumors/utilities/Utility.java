@@ -1,4 +1,4 @@
-package com.if5a.rumors;
+package com.if5a.rumors.utilities;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

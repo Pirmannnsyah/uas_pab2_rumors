@@ -42,7 +42,7 @@ import com.if5a.rumors.APIService;
 import com.if5a.rumors.Data;
 import com.if5a.rumors.R;
 import com.if5a.rumors.Sender;
-import com.if5a.rumors.Utility;
+import com.if5a.rumors.utilities.Utility;
 import com.if5a.rumors.ViewData;
 import com.if5a.rumors.chats.ChatMessage;
 import com.if5a.rumors.chats.ChatViewHolder;
