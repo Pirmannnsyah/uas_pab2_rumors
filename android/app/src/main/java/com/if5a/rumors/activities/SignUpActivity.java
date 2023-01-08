@@ -19,7 +19,17 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.if5a.rumors.R;
+import com.if5a.rumors.models.GetJson;
 import com.if5a.rumors.models.User;
+import com.if5a.rumors.models.UserAPI;
+import com.if5a.rumors.services.APIService;
+import com.if5a.rumors.utilities.UtilityAPI;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class SignUpActivity extends AppCompatActivity {
     private EditText etnama, etemail, etnohp, etpassword, etulangpassword;
@@ -83,25 +93,42 @@ public class SignUpActivity extends AppCompatActivity {
                     return;
                 }
 
-                mAuth.createUserWithEmailAndPassword(email, password)
-                        .addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if (task.isSuccessful()){
-                                    Toast.makeText(SignUpActivity.this, "Sign Up Successfully!", Toast.LENGTH_SHORT).show();
-                                    User user = new User(email, nama);
-                                    String userId = task.getResult().getUser().getUid();
-                                    mRef = mRoot.child("users").child(userId);
-                                    mRef.setValue(user);
-                                    Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
-                                    startActivity(intent);
-                                    finish();
-                                } else {
-                                    Toast.makeText(SignUpActivity.this, "Sign Up Fail!", Toast.LENGTH_SHORT).show();
-                                }
+                UtilityAPI.getRetrofit().create(APIService.class).postUser(mAuth.getCurrentUser().getUid(),nama,nama).enqueue(new Callback<GetJson<List<UserAPI>>>() {
+                    @Override
+                    public void onResponse(Call<GetJson<List<UserAPI>>> call, Response<GetJson<List<UserAPI>>> response) {
+                        if (response.isSuccessful()){
+                            mAuth.createUserWithEmailAndPassword(email, password)
+                                    .addOnCompleteListener(SignUpActivity.this, new OnCompleteListener<AuthResult>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<AuthResult> task) {
+                                            if (task.isSuccessful()){
+//                                      Toast.makeText(SignUpActivity.this, "user_id:"+mAuth.getCurrentUser().getUid(), Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(SignUpActivity.this, "Sign Up Successfully!", Toast.LENGTH_SHORT).show();
+                                                User user = new User(email, nama);
+                                                String userId = task.getResult().getUser().getUid();
+                                                mRef = mRoot.child("users").child(userId);
+                                                mRef.setValue(user);
+                                                Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
+                                                startActivity(intent);
+                                                finish();
+                                            } else {
+                                                Toast.makeText(SignUpActivity.this, "Sign Up Fail!", Toast.LENGTH_SHORT).show();
+                                            }
 
-                            }
-                        });
+                                        }
+                                    });
+
+                        } else {
+                            Toast.makeText(SignUpActivity.this, "data:"+response.body().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                    @Override
+                    public void onFailure(Call<GetJson<List<UserAPI>>> call, Throwable t) {
+                        Toast.makeText(SignUpActivity.this, "Sign up gagal!", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+
             }
         });
 

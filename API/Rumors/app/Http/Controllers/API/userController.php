@@ -31,7 +31,7 @@ class userController extends Controller
         } catch (\Exception $e) {
             return response()->json([
                 "message" => "Database Error"
-            ]);
+            ],400);
         }
     }
 
@@ -52,11 +52,11 @@ class userController extends Controller
             return response()->json([
                 "message" => "store berhasil",
                 "data" => $user
-            ]);
+            ],200);
         } catch (\Exception $e) {
             return response()->json([
                 "message" => "Gagal store data"
-            ]);
+            ],400);
         }
 
     }
@@ -73,11 +73,11 @@ class userController extends Controller
         if ($user) {
             return response()->json([
                 $user
-            ]);
+            ],200);
         } else {
             return response()->json([
                 "message" => "Gagal store data"
-            ]);
+            ],400);
         }
     }
 
@@ -99,11 +99,11 @@ class userController extends Controller
             return response()->json([
                 "message" => "update berhasil",
                 "data" => $user
-            ]);
+            ],200);
         } catch (\Exception $e) {
             return response()->json([
                 "message" => "Gagal update data"
-            ]);
+            ],400);
         }
     }
 
@@ -120,11 +120,11 @@ class userController extends Controller
             $user->delete();
             return response()->json([
                 "message" => "Berhasil menghapus data"
-            ]);
+            ],200);
         } else {
             return response()->json([
                 "message" => "Gagal menghapus data"
-            ]);
+            ],400);
         }
 
     }

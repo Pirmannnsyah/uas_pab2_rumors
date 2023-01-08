@@ -20,11 +20,11 @@ class postController extends Controller
             if($Post){
                 return response()->json([
                     "data"=>$Post
-                ]);
+                ],200);
             } else {
                 return response()->json([
                     "message" => "Gagal Mengambil data"
-                ]);
+                ],400);
             }
             
         } catch (\Exception $e) {
