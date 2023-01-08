@@ -93,6 +93,9 @@ public class SignUpActivity extends AppCompatActivity {
                                     String userId = task.getResult().getUser().getUid();
                                     mRef = mRoot.child("users").child(userId);
                                     mRef.setValue(user);
+                                    Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
+                                    startActivity(intent);
+                                    finish();
                                 } else {
                                     Toast.makeText(SignUpActivity.this, "Sign Up Fail!", Toast.LENGTH_SHORT).show();
                                 }
@@ -102,14 +105,6 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
-        btndaftar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
 
         etmasuk.setOnClickListener(new View.OnClickListener() {
             @Override

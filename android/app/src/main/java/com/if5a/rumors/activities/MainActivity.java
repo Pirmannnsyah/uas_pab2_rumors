@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            ivLogout.setOnClickListener(new View.OnClickListener() {
+            ivInfo.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Intent intent = new Intent(MainActivity.this, InfoActivity.class);

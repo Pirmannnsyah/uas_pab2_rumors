@@ -79,6 +79,7 @@ public class ChatActivity extends AppCompatActivity {
         FirebaseMessaging.getInstance().subscribeToTopic("messages");
         mAuth = FirebaseAuth.getInstance();
         userId = mAuth.getCurrentUser().getUid();
+        Log.d(TAG, "onCreate: "+userId);
         mRoot = FirebaseDatabase.getInstance().getReference();
         mRef = mRoot.child("users").child(userId);
         mRef.addValueEventListener(new ValueEventListener() {
