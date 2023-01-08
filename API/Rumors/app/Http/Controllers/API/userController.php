@@ -19,12 +19,13 @@ class userController extends Controller
             $user = User::all();
             if($user){
                 return response()->json([
+                    "message" => "Data berhasil di ambil",
                     "data"=>$user
-                ]);
+                ],200);
             } else {
                 return response()->json([
                     "message" => "Gagal Mengambil data"
-                ]);
+                ],400);
             }
             
         } catch (\Exception $e) {
