@@ -51,7 +51,7 @@ class likeController extends Controller
      */
     public function show($post_id)
     {
-        $Like = Like::where("post_id","=",$post_id);
+        $Like = Like::where("post_id","=",$post_id)->get();
         if ($Like) {
             return response()->json([
                 "data"=>$Like

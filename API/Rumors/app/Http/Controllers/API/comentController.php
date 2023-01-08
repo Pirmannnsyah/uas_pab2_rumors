@@ -52,7 +52,7 @@ class comentController extends Controller
      */
     public function show($post_id)
     {
-        $Coment = Coment::where("post_id","=",$post_id);
+        $Coment = Coment::where("post_id","=",$post_id)->get();
         if ($Coment) {
             return response()->json([
                 "data"=>$Coment

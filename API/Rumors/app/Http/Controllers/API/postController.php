@@ -69,7 +69,7 @@ class postController extends Controller
      */
     public function show($kategori)
     {
-        $Post = Post::where("kategori","=",$kategori);
+        $Post = Post::where("kategori","=",$kategori)->get();
         if ($Post) {
             return response()->json([
                 "data"=>$Post
