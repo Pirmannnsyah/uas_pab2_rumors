@@ -46,4 +46,542 @@
     </RelativeLayout>
   </androidx.constraintlayout.widget.ConstraintLayout>
 
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/cl_info"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cl_tb_chat">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#263159"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/cl_info"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Versi App"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="right"
+        android:text="V.1.00"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <View
+        android:id="@+id/vw_versi_sistem"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="3dp"
+        android:background="#263159"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Versi Sistem"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vw_versi_sistem"
+        app:layout_constraintStart_toStartOf="@+id/vw_versi_sistem"
+        app:layout_constraintTop_toTopOf="@+id/vw_versi_sistem" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="right"
+        android:text="Android 8"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vw_versi_sistem"
+        app:layout_constraintEnd_toEndOf="@id/vw_versi_sistem"
+        app:layout_constraintTop_toTopOf="@+id/vw_versi_sistem" />
+
+    <View
+        android:id="@+id/vw_tanggal_pembuatan"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="3dp"
+        android:background="#263159"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vw_versi_sistem" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Tanggal Pembuatan"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vw_tanggal_pembuatan"
+        app:layout_constraintStart_toStartOf="@+id/vw_tanggal_pembuatan"
+        app:layout_constraintTop_toTopOf="@+id/vw_tanggal_pembuatan" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="right"
+        android:text="01-01-2023"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vw_tanggal_pembuatan"
+        app:layout_constraintEnd_toEndOf="@id/vw_tanggal_pembuatan"
+        app:layout_constraintTop_toTopOf="@+id/vw_tanggal_pembuatan" />
+
+    <View
+        android:id="@+id/vw_mata_kuliah"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="3dp"
+        android:background="#263159"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vw_tanggal_pembuatan" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:text="Mata Kuliah"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vw_mata_kuliah"
+        app:layout_constraintStart_toStartOf="@+id/vw_mata_kuliah"
+        app:layout_constraintTop_toTopOf="@+id/vw_mata_kuliah" />
+
+    <TextView
+        android:id="@+id/tv_mata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="right"
+        android:text="PAB 2"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/vw_mata_kuliah"
+        app:layout_constraintEnd_toEndOf="@id/vw_mata_kuliah"
+        app:layout_constraintTop_toTopOf="@+id/vw_mata_kuliah" />
+
   </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <LinearLayout
+      android:id="@+id/ly_versi"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_marginTop="3dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/cl_info">
+
+    <com.github.florent37.expansionpanel.ExpansionHeader
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:expansion_headerIndicator="@id/headerIndicator"
+        app:expansion_layout="@id/expansionLayout"
+        app:expansion_toggleOnClick="true">
+
+      <View
+          android:id="@+id/view5"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:background="#263159"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="@id/cl_tb_chat" />
+
+      <TextView
+          android:id="@+id/textView5"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="8dp"
+          android:fontFamily="@font/montserrat_medium"
+          android:text="Tentang Kami"
+          android:textColor="@color/white"
+          android:textSize="18dp"/>
+
+
+      <!-- HEADER -->
+
+      ...
+      <!-- HEADER INDICATOR -->
+      <ImageView
+          android:id="@+id/headerIndicator"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical|right"
+          android:layout_marginLeft="16dp"
+          android:adjustViewBounds="true"
+          app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+
+    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+    <com.github.florent37.expansionpanel.ExpansionLayout
+        android:id="@+id/expansionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+      <!-- CONTENT -->
+
+      <androidx.core.widget.NestedScrollView
+          android:id="@+id/sc_main"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_marginTop="8dp"
+          android:overScrollMode="never"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Our Developer Team"
+              android:textColor="@color/white"
+              android:textSize="24dp"
+              android:layout_marginStart="20dp"
+              android:fontFamily="@font/montserrat_medium"/>
+
+          <com.google.android.material.card.MaterialCardView
+              android:id="@+id/cv_fugu"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:cardCornerRadius="10dp"
+              android:layout_marginStart="16dp"
+              android:layout_marginEnd="16dp"
+              app:cardElevation="4dp"
+              app:cardUseCompatPadding="true"
+              app:strokeColor="@color/white"
+              app:strokeWidth="1dp"
+              app:cardBackgroundColor="#24304C">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+              <de.hdodenhof.circleimageview.CircleImageView
+                  android:id="@+id/iv_fugu"
+                  android:layout_width="96dp"
+                  android:layout_height="96dp"
+                  android:layout_marginStart="16dp"
+                  android:src="@drawable/fugukurniawan"
+                  app:civ_border_color="@color/white"
+                  app:civ_border_width="2dp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <TextView
+                  android:id="@+id/tv_nama_fugu"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:text="Felix Kurniawan"
+                  android:textSize="20sp"
+                  android:textColor="@color/white"
+                  android:fontFamily="@font/montserrat_medium"
+                  app:layout_constraintStart_toEndOf="@+id/iv_fugu"
+                  app:layout_constraintTop_toTopOf="parent"/>
+
+              <ImageView
+                  android:id="@+id/iv_git_fugu"
+                  android:layout_width="20dp"
+                  android:layout_height="20dp"
+                  android:layout_marginStart="16dp"
+                  android:src="@drawable/github2"
+                  android:onClick="openGitFugu"
+                  app:layout_constraintStart_toEndOf="@+id/iv_fugu"
+                  app:layout_constraintTop_toTopOf="@+id/tv_git_fugu" />
+
+              <ImageView
+                  android:id="@+id/iv_ig_fugu"
+                  android:layout_width="20dp"
+                  android:layout_height="20dp"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginTop="8dp"
+                  android:src="@drawable/instagram"
+                  android:onClick="openIgFugu"
+                  app:layout_constraintStart_toEndOf="@+id/iv_fugu"
+                  app:layout_constraintTop_toBottomOf="@+id/iv_git_fugu" />
+
+              <TextView
+                  android:id="@+id/tv_git_fugu"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="4dp"
+                  android:fontFamily="@font/montserrat_medium"
+                  android:lineSpacingExtra="2dp"
+                  android:text="github.com/felixkey"
+                  android:onClick="openGitFugu"
+                  android:textColor="@color/white"
+                  android:textSize="12sp"
+                  app:layout_constraintStart_toEndOf="@+id/iv_git_fugu"
+                  app:layout_constraintTop_toBottomOf="@+id/tv_nama_fugu" />
+
+              <TextView
+                  android:id="@+id/tv_ig_fugu"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginStart="4dp"
+                  android:fontFamily="@font/montserrat_medium"
+                  android:lineSpacingExtra="2dp"
+                  android:text="instagram.com/felixkeyy"
+                  android:onClick="openIgFugu"
+                  android:textColor="@color/white"
+                  android:textSize="12sp"
+                  app:layout_constraintStart_toEndOf="@+id/iv_ig_fugu"
+                  app:layout_constraintTop_toBottomOf="@+id/tv_git_fugu" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+          </com.google.android.material.card.MaterialCardView>
+
+          <com.google.android.material.card.MaterialCardView
+              android:id="@+id/cv_firman"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:cardCornerRadius="10dp"
+              android:layout_marginStart="16dp"
+              android:layout_marginEnd="16dp"
+              app:cardElevation="4dp"
+              app:strokeColor="@color/white"
+              app:strokeWidth="1dp"
+              app:cardUseCompatPadding="true"
+              app:cardBackgroundColor="#24304C"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/cv_fugu">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+              <de.hdodenhof.circleimageview.CircleImageView
+                  android:id="@+id/iv_firman"
+                  android:layout_width="96dp"
+                  android:layout_height="96dp"
+                  android:layout_marginStart="16dp"
+                  android:src="@drawable/pirman"
+                  app:civ_border_color="@color/white"
+                  app:civ_border_width="2dp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <TextView
+                  android:id="@+id/tv_nama_firman"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:text="Muhammad Firmansyah"
+                  android:textSize="18sp"
+                  android:textColor="@color/white"
+                  android:fontFamily="@font/montserrat_medium"
+                  app:layout_constraintStart_toEndOf="@+id/iv_firman"
+                  app:layout_constraintTop_toTopOf="parent"/>
+
+              <ImageView
+                  android:id="@+id/iv_git_firman"
+                  android:layout_width="20dp"
+                  android:layout_height="20dp"
+                  android:layout_marginStart="16dp"
+                  android:src="@drawable/github2"
+                  android:onClick="openGitFirman"
+                  app:layout_constraintStart_toEndOf="@+id/iv_firman"
+                  app:layout_constraintTop_toTopOf="@+id/tv_git_firman" />
+
+              <ImageView
+                  android:id="@+id/iv_ig_firman"
+                  android:layout_width="20dp"
+                  android:layout_height="20dp"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginTop="8dp"
+                  android:src="@drawable/instagram"
+                  android:onClick="openIgFirman"
+                  app:layout_constraintStart_toEndOf="@+id/iv_firman"
+                  app:layout_constraintTop_toBottomOf="@+id/iv_git_firman" />
+
+              <TextView
+                  android:id="@+id/tv_git_firman"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="4dp"
+                  android:fontFamily="@font/montserrat_medium"
+                  android:lineSpacingExtra="2dp"
+                  android:text="github.com/Pirmannnsyah"
+                  android:onClick="openGitFirman"
+                  android:textColor="@color/white"
+                  android:textSize="12sp"
+                  app:layout_constraintStart_toEndOf="@+id/iv_git_firman"
+                  app:layout_constraintTop_toBottomOf="@+id/tv_nama_firman" />
+
+              <TextView
+                  android:id="@+id/tv_ig_firman"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginStart="4dp"
+                  android:fontFamily="@font/montserrat_medium"
+                  android:lineSpacingExtra="2dp"
+                  android:text="instagram.com/firmansyyh_"
+                  android:onClick="openIgFirman"
+                  android:textColor="@color/white"
+                  android:textSize="12sp"
+                  app:layout_constraintStart_toEndOf="@+id/iv_ig_firman"
+                  app:layout_constraintTop_toBottomOf="@+id/tv_git_firman" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+          </com.google.android.material.card.MaterialCardView>
+
+          <com.google.android.material.card.MaterialCardView
+              android:id="@+id/cv_yugioh"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              app:cardCornerRadius="10dp"
+              android:layout_marginStart="16dp"
+              android:layout_marginEnd="16dp"
+              app:cardElevation="4dp"
+              app:cardUseCompatPadding="true"
+              app:cardBackgroundColor="#24304C"
+              app:strokeColor="@color/white"
+              app:strokeWidth="1dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/cv_firman">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+              <de.hdodenhof.circleimageview.CircleImageView
+                  android:id="@+id/iv_steven"
+                  android:layout_width="96dp"
+                  android:layout_height="96dp"
+                  android:layout_marginStart="16dp"
+                  android:src="@drawable/steven"
+                  app:civ_border_color="@color/white"
+                  app:civ_border_width="2dp"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <TextView
+                  android:id="@+id/tv_nama_steven"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="16dp"
+                  android:text="Steven Yesua Sutanto"
+                  android:textSize="20sp"
+                  android:textColor="@color/white"
+                  android:fontFamily="@font/montserrat_medium"
+                  app:layout_constraintStart_toEndOf="@+id/iv_steven"
+                  app:layout_constraintTop_toTopOf="parent"/>
+
+              <ImageView
+                  android:id="@+id/iv_git_steven"
+                  android:layout_width="20dp"
+                  android:layout_height="20dp"
+                  android:layout_marginStart="16dp"
+                  android:src="@drawable/github2"
+                  android:onClick="openGitSteven"
+                  app:layout_constraintStart_toEndOf="@+id/iv_steven"
+                  app:layout_constraintTop_toTopOf="@+id/tv_git_steven" />
+
+              <ImageView
+                  android:id="@+id/iv_ig_steven"
+                  android:layout_width="20dp"
+                  android:layout_height="20dp"
+                  android:layout_marginStart="16dp"
+                  android:layout_marginTop="8dp"
+                  android:src="@drawable/instagram"
+                  android:onClick="openIgSteven"
+                  app:layout_constraintStart_toEndOf="@+id/iv_steven"
+                  app:layout_constraintTop_toBottomOf="@+id/iv_git_steven" />
+
+              <TextView
+                  android:id="@+id/tv_git_steven"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="4dp"
+                  android:fontFamily="@font/montserrat_medium"
+                  android:lineSpacingExtra="2dp"
+                  android:text="github.com/stevenyesua"
+                  android:onClick="openGitSteven"
+                  android:textColor="@color/white"
+                  android:textSize="12sp"
+                  app:layout_constraintStart_toEndOf="@+id/iv_git_steven"
+                  app:layout_constraintTop_toBottomOf="@+id/tv_nama_steven" />
+
+              <TextView
+                  android:id="@+id/tv_ig_steven"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginStart="4dp"
+                  android:fontFamily="@font/montserrat_medium"
+                  android:lineSpacingExtra="2dp"
+                  android:text="instagram.com/ssteventan"
+                  android:onClick="openIgSteven"
+                  android:textColor="@color/white"
+                  android:textSize="12sp"
+                  app:layout_constraintStart_toEndOf="@+id/iv_ig_steven"
+                  app:layout_constraintTop_toBottomOf="@+id/tv_git_steven" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+          </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+      </androidx.core.widget.NestedScrollView>
+
+    </com.github.florent37.expansionpanel.ExpansionLayout>
+
+
+  </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
