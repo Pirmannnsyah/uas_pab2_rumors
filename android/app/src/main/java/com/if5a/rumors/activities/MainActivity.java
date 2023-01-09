@@ -13,6 +13,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.if5a.rumors.R;
 import com.if5a.rumors.adapters.MyViewPagerAdapter;
 
+import io.github.muddz.styleabletoast.StyleableToast;
+
 public class MainActivity extends AppCompatActivity {
 
     private ImageView ivLogout, ivmessage, ivAccount, ivInfo, ivAdd;
@@ -110,6 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     mAuth.signOut();
+                    StyleableToast.makeText(MainActivity.this,"Anda Telah Log Out",R.style.exampleToast).show();
                     Intent intent = new Intent(MainActivity.this, SignInActivity.class);
                     startActivity(intent);
                     finish();

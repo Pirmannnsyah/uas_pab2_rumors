@@ -134,15 +134,15 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Game"
-                        android:textSize="16sp"/>
+                        android:text="Games"
+                        android:textSize="15sp"/>
 
                     <RadioButton
                         android:id="@+id/rd_sports"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Sport"
+                        android:text="Sports"
                         android:textSize="16sp"/>
 
                     <RadioButton
@@ -150,7 +150,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Food"
+                        android:text="Foods"
                         android:textSize="16sp"/>
                 </RadioGroup>
 

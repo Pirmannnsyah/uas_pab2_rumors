@@ -67,6 +67,8 @@ dependencies {
     implementation 'com.github.florent37:expansionpanel:1.2.4'
     // Circle Image View
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    //Supertoast
+    implementation 'io.github.muddz:styleabletoast:2.4.0'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'

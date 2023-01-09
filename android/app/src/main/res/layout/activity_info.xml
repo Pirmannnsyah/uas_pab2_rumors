@@ -52,13 +52,14 @@
       android:layout_height="wrap_content"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
+      android:layout_margin="16dp"
       app:layout_constraintTop_toBottomOf="@+id/cl_tb_chat">
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#263159"
+        android:background="@drawable/costum_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/cl_info"/>
@@ -71,7 +72,7 @@
         android:fontFamily="@font/montserrat_medium"
         android:text="Versi App"
         android:textColor="@color/white"
-        android:textSize="18dp"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/view" />
@@ -84,7 +85,7 @@
         android:gravity="right"
         android:text="V.1.00"
         android:textColor="@color/white"
-        android:textSize="18dp"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view" />
@@ -93,8 +94,8 @@
         android:id="@+id/vw_versi_sistem"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="3dp"
-        android:background="#263159"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/costum_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
@@ -106,7 +107,7 @@
         android:fontFamily="@font/montserrat_medium"
         android:text="Versi Sistem"
         android:textColor="@color/white"
-        android:textSize="18dp"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/vw_versi_sistem"
         app:layout_constraintStart_toStartOf="@+id/vw_versi_sistem"
         app:layout_constraintTop_toTopOf="@+id/vw_versi_sistem" />
@@ -119,7 +120,7 @@
         android:gravity="right"
         android:text="Android 8"
         android:textColor="@color/white"
-        android:textSize="18dp"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/vw_versi_sistem"
         app:layout_constraintEnd_toEndOf="@id/vw_versi_sistem"
         app:layout_constraintTop_toTopOf="@+id/vw_versi_sistem" />
@@ -128,8 +129,8 @@
         android:id="@+id/vw_tanggal_pembuatan"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="3dp"
-        android:background="#263159"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/costum_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vw_versi_sistem" />
@@ -141,7 +142,7 @@
         android:fontFamily="@font/montserrat_medium"
         android:text="Tanggal Pembuatan"
         android:textColor="@color/white"
-        android:textSize="18dp"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/vw_tanggal_pembuatan"
         app:layout_constraintStart_toStartOf="@+id/vw_tanggal_pembuatan"
         app:layout_constraintTop_toTopOf="@+id/vw_tanggal_pembuatan" />
@@ -154,7 +155,7 @@
         android:gravity="right"
         android:text="01-01-2023"
         android:textColor="@color/white"
-        android:textSize="18dp"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/vw_tanggal_pembuatan"
         app:layout_constraintEnd_toEndOf="@id/vw_tanggal_pembuatan"
         app:layout_constraintTop_toTopOf="@+id/vw_tanggal_pembuatan" />
@@ -163,8 +164,8 @@
         android:id="@+id/vw_mata_kuliah"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="3dp"
-        android:background="#263159"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/costum_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/vw_tanggal_pembuatan" />
@@ -176,7 +177,7 @@
         android:fontFamily="@font/montserrat_medium"
         android:text="Mata Kuliah"
         android:textColor="@color/white"
-        android:textSize="18dp"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/vw_mata_kuliah"
         app:layout_constraintStart_toStartOf="@+id/vw_mata_kuliah"
         app:layout_constraintTop_toTopOf="@+id/vw_mata_kuliah" />
@@ -190,7 +191,7 @@
         android:gravity="right"
         android:text="PAB 2"
         android:textColor="@color/white"
-        android:textSize="18dp"
+        android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="@+id/vw_mata_kuliah"
         app:layout_constraintEnd_toEndOf="@id/vw_mata_kuliah"
         app:layout_constraintTop_toTopOf="@+id/vw_mata_kuliah" />
@@ -202,7 +203,9 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:orientation="vertical"
-      android:layout_marginTop="3dp"
+      android:layout_marginTop="4dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toBottomOf="@+id/cl_info">
 
@@ -217,7 +220,7 @@
           android:id="@+id/view5"
           android:layout_width="match_parent"
           android:layout_height="50dp"
-          android:background="#263159"
+          android:background="@drawable/costum_btn"
           app:layout_constraintEnd_toEndOf="parent"
           app:layout_constraintStart_toStartOf="parent"
           app:layout_constraintTop_toTopOf="@id/cl_tb_chat" />
@@ -231,7 +234,7 @@
           android:fontFamily="@font/montserrat_medium"
           android:text="Tentang Kami"
           android:textColor="@color/white"
-          android:textSize="18dp"/>
+          android:textSize="16dp"/>
 
 
       <!-- HEADER -->

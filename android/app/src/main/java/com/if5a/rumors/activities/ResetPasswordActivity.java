@@ -50,20 +50,14 @@ public class ResetPasswordActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<Void> task) {
                                 if(task.isSuccessful()){
                                     Toast.makeText(ResetPasswordActivity.this, "Intruksi reset password telah dikirimkan", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(ResetPasswordActivity.this, SignInActivity.class);
+                                    startActivity(intent);
+                                    finish();
                                 }else {
                                     Toast.makeText(ResetPasswordActivity.this, "Gagal Mengirim Intruksi Reset Email", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
-            }
-        });
-
-        btnResetPassword.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ResetPasswordActivity.this, SignInActivity.class);
-                startActivity(intent);
-                finish();
             }
         });
 

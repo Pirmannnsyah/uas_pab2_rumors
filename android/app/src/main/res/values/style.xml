@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="ThemeCustom.TabLayout" parent="Theme.MaterialComponents.Light"/>
+
+    <style name="exampleToast">
+        <item name="colorOnBackground">#263159</item>
+        <item name="textColor">@color/white</item>
+    </style>
 </resources>
